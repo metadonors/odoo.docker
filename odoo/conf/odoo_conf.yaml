@@ -1,9 +1,11 @@
 ---
 
 addons_path:
+    - /mnt/dev-addons
     - /mnt/extra-addons
     - /mnt/community-addons
-    - /mnt/dev-addons
+    - /mnt/bundle-addons/web
+    - /mnt/bundle-addons/backend_theme
     
 admin_passwd: admin
 server_wide_modules: web
