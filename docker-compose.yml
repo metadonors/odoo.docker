@@ -5,8 +5,6 @@ volumes:
 services:
   odoo:
     build: odoo
-    image: metadonors/odoo:11.0
-    container_name: odoo
     ports:
       - 8069:8069
       - 8072:8072
@@ -22,20 +20,17 @@ services:
     volumes:
       - "data_odoo:/var/lib/odoo/"
       # mount volumes for dev needs
-      #- "./odoo/project_addons:/srv/webapp/project_addons"
-      #- "./odoo/amnesty_addons:/srv/webapp/amnesty_addons"
-      #- "./tmp:/srv/webapp/tmp"
+      - "./addons:/mnt/dev-addons"
     # launch container in odoo dev mode
-    # command: run --dev
+    command: run --dev=all
   nginx:
     build: web
-    image: metadonors/nginx_odoo:latest
-    container_name: odoo_nginx
     ports:
        - 80:80
+    links:
+      - "odoo:odoo"
   postgres:
     image: postgres:10.0
-    container_name: odoo_postgres
     ports:
        - 5432:5432
     environment:

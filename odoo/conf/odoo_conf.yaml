@@ -3,6 +3,7 @@
 addons_path:
     - /mnt/extra-addons
     - /mnt/community-addons
+    - /mnt/dev-addons
     
 admin_passwd: admin
 server_wide_modules: web
