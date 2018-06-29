@@ -1,0 +1,9 @@
+[submodule "addons/todo_app"]
+	path = addons/todo_app
+	url = https://github.com/metadonors/odoo.workshop.todo.git
+[submodule "addons/odoo.workshop.todo_user"]
+	path = addons/odoo.workshop.todo_user
+	url = https://github.com/metadonors/odoo.workshop.todo_user.git
+[submodule "addons/todo_user"]
+	path = addons/todo_user
+	url = https://github.com/metadonors/odoo.workshop.todo_user.git
