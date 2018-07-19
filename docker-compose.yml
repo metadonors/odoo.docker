@@ -6,8 +6,7 @@ services:
   odoo:
     build: odoo
     ports:
-      - 8069:8069
-      - 8072:8072
+      - 80:80
     depends_on:
       - postgres
     links:
@@ -17,18 +16,15 @@ services:
       - ODOO_DB_NAME=demo
       - ODOO_DB_USER=odoo
       - ODOO_DB_PASSWORD=odoo
+      - ODOO_WORKERS=4
+      - ODOO_LIMIT_MEMORY_HARD=6845104128
+      - ODOO_LIMIT_MEMORY_SOFT=5704253440
     volumes:
       - "data_odoo:/var/lib/odoo/"
       # mount volumes for dev needs
       - "./addons:/mnt/dev-addons"
     # launch container in odoo dev mode
-    command: run --dev=all
-  nginx:
-    build: web
-    ports:
-       - 80:80
-    links:
-      - "odoo:odoo"
+    command: run 
   postgres:
     image: postgres:10.0
     ports:
