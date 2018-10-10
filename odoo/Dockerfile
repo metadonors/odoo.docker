@@ -20,7 +20,11 @@ RUN apt-get update \
     && chown -R odoo:odoo /mnt/utils /mnt/community-addons /mnt/dev-addons /mnt/bundle-addons
 
 RUN git clone --depth=1 -b 11.0 https://github.com/OCA/web.git  /mnt/bundle-addons/web \
-    && git clone --depth=1 -b 11.0 https://github.com/Openworx/backend_theme.git /mnt/bundle-addons/backend_theme
+    && git clone --depth=1 -b 11.0 https://github.com/OCA/server-ux.git /mnt/bundle-addons/server-ux \
+    && git clone --depth=1 -b 11.0 https://github.com/OCA/server-tools.git /mnt/bundle-addons/server-tools \
+    && git clone --depth=1 -b 11.0 https://github.com/OCA/partner-contact.git /mnt/bundle-addons/partner-contact \
+    && git clone --depth=1 -b 11.0 https://github.com/OCA/queue.git /mnt/bundle-addons/queue \
+    && git clone --depth=1 -b 11.0 https://github.com/OCA/connector.git /mnt/bundle-addons/connector 
 
 COPY extra-requirements.txt /mnt/utils/extra-requirements.txt
 COPY scripts /mnt/utils/scripts
