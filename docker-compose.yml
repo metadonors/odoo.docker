@@ -4,7 +4,8 @@ volumes:
     pgdata_odoo:
 services:
   odoo:
-    build: odoo
+    image: metadonors/odoo:workshop
+    #build: odoo
     ports:
       - 80:80
     depends_on:
