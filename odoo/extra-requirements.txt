@@ -7,4 +7,4 @@ ipython
 OdooRPC
 gevent==1.1.2
 greenlet==0.4.10
-cachetools
+cachetools>=2.0.1,<3.0.0

@@ -6,6 +6,7 @@ addons_path:
     - /mnt/community-addons
     - /mnt/bundle-addons/web
     - /mnt/bundle-addons/server-ux
+    - /mnt/bundle-addons/ecommerce
     - /mnt/bundle-addons/server-tools
     - /mnt/bundle-addons/partner-contact
     - /mnt/bundle-addons/queue 

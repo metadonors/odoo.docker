@@ -14,6 +14,12 @@ case $1 in
     upgrade)
         exec sudo -E -u odoo odoo -c /etc/odoo/odoo.conf -u ${args[@]:1} --stop-after-init
         ;;
+    test)
+        exec sudo -E -u odoo odoo -c /etc/odoo/odoo.conf --workers 0 --test-enable --stop-after-init -i ${args[@]:1}
+        ;;
+    test_all)
+        exec sudo -E -u odoo odoo -c /etc/odoo/odoo.conf --workers 0 --test-enable --stop-after-init
+        ;;
     run)
         echo "Starting nginx..."
         nginx -c /etc/nginx/nginx.conf &    
