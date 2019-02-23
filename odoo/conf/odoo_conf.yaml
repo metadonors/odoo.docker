@@ -5,10 +5,17 @@ addons_path:
     - /mnt/extra-addons
     - /mnt/community-addons
     - /mnt/bundle-addons/web
-    - /mnt/bundle-addons/backend_theme
+    - /mnt/bundle-addons/website
+    - /mnt/bundle-addons/server-ux
+    - /mnt/bundle-addons/ecommerce
+    - /mnt/bundle-addons/rest-framework
+    - /mnt/bundle-addons/server-tools
+    - /mnt/bundle-addons/partner-contact
+    - /mnt/bundle-addons/queue 
+    - /mnt/bundle-addons/connector 
     
 admin_passwd: admin
-server_wide_modules: web
+server_wide_modules: queue_job,web
 channels: root:4
 proxy_mode: true
 

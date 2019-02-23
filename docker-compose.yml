@@ -1,6 +1,6 @@
 version: '3'
 volumes:
-    data_odoo:
+    data_odoo_11:
     pgdata_odoo:
 services:
   odoo:
@@ -20,7 +20,7 @@ services:
       - ODOO_LIMIT_MEMORY_HARD=6845104128
       - ODOO_LIMIT_MEMORY_SOFT=5704253440
     volumes:
-      - "data_odoo:/var/lib/odoo/"
+      - "data_odoo_11:/var/lib/odoo/"
       # mount volumes for dev needs
       - "./addons:/mnt/dev-addons"
     # launch container in odoo dev mode
