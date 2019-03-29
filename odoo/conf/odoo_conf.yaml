@@ -7,7 +7,8 @@ addons_path:
     - /mnt/bundle-addons/web
     - /mnt/bundle-addons/website
     - /mnt/bundle-addons/server-ux
-    - /mnt/bundle-addons/ecommerce
+    - /mnt/bundle-addons/muk_base
+    - /mnt/bundle-addons/muk_web
     - /mnt/bundle-addons/rest-framework
     - /mnt/bundle-addons/server-tools
     - /mnt/bundle-addons/partner-contact

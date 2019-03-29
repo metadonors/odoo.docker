@@ -19,10 +19,14 @@ RUN apt-get update \
     && mkdir -p /mnt/utils /mnt/community-addons /mnt/dev-addons /mnt/bundle-addons \
     && chown -R odoo:odoo /mnt/utils /mnt/community-addons /mnt/dev-addons /mnt/bundle-addons
 
+
 RUN git clone --depth=1 -b 12.0 https://github.com/OCA/web.git  /mnt/bundle-addons/web \
     && git clone --depth=1 -b 12.0 https://github.com/OCA/website.git /mnt/bundle-addons/website \
+    && git clone --depth=1 -b 12.0 https://github.com/muk-it/muk_base.git /mnt/bundle-addons/muk_base \
+    && git clone --depth=1 -b 12.0 https://github.com/muk-it/muk_web.git /mnt/bundle-addons/muk_web \
     && git clone --depth=1 -b 12.0  https://github.com/OCA/server-ux.git /mnt/bundle-addons/server-ux \
     && git clone --depth=1 -b 12.0 https://github.com/OCA/server-tools.git /mnt/bundle-addons/server-tools \
+    && git clone --depth=1 -b 12.0 https://github.com/OCA/account-invoicing.git /mnt/bundle-addons/account-invoicing \
     && git clone --depth=1 -b 12.0 https://github.com/OCA/partner-contact.git /mnt/bundle-addons/partner-contact \
     && git clone --depth=1 -b 12.0 https://github.com/OCA/queue.git /mnt/bundle-addons/queue \
     && git clone --depth=1 -b 12.0 https://github.com/OCA/rest-framework.git /mnt/bundle-addons/rest-framework \
