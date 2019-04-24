@@ -1,0 +1,57 @@
+kind: pipeline
+name: default
+steps:
+  - name: slack
+    image: plugins/slack
+    settings:
+      username: Marvin il DevOps
+      icon_url: https://cdn4.iconfinder.com/data/icons/free-large-android-icons/512/Paranoid_android_with_shadow.png
+      webhook: 
+        from_secret: slack_hook
+      channel: ops_odoo
+      template: Inizio la build di Odoo Commnunity 11.0
+  - name: docker  
+    image: plugins/docker
+    when:
+      branch:
+        - 11.0
+      event:
+        - push
+    settings:
+      repo: metadonors/odoo
+      tags: 
+        - 11.0
+      username:
+        from_secret: docker_login
+      password:
+        from_secret: docker_password
+  
+  - name: slack
+    image: plugins/slack
+    settings:
+      username: Marvin il DevOps
+      icon_url: https://cdn4.iconfinder.com/data/icons/free-large-android-icons/512/Paranoid_android_with_shadow.png
+      webhook: 
+        from_secret: slack_hook
+      channel: ops_odoo
+      template: >
+        {{#success build.status}}
+          Nuova build di Odoo Community {{build.number}}.
+        {{else}}
+          Build Odoo Community {{build.number}} fallita.
+        {{/success}}
+
+---
+kind: secret
+
+external_data:
+  docker_login:
+    path: ci/docker
+    name: username
+  docker_password:
+    path: ci/docker
+    name: password
+  
+  slack_hook:
+    path: ci/slack  
+    name: webhook_metaface
