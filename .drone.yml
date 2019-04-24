@@ -1,7 +1,7 @@
 kind: pipeline
 name: default
 steps:
-  - name: slack
+  - name: slack-start
     image: plugins/slack
     settings:
       username: Marvin il DevOps
@@ -26,7 +26,7 @@ steps:
       password:
         from_secret: docker_password
   
-  - name: slack
+  - name: slack-end
     image: plugins/slack
     settings:
       username: Marvin il DevOps
