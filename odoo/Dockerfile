@@ -30,7 +30,11 @@ RUN git clone --depth=1 -b 12.0 https://github.com/OCA/web.git  /mnt/bundle-addo
     && git clone --depth=1 -b 12.0 https://github.com/OCA/partner-contact.git /mnt/bundle-addons/partner-contact \
     && git clone --depth=1 -b 12.0 https://github.com/OCA/queue.git /mnt/bundle-addons/queue \
     && git clone --depth=1 -b 12.0 https://github.com/OCA/rest-framework.git /mnt/bundle-addons/rest-framework \
-    && git clone --depth=1 -b 12.0 https://github.com/OCA/connector.git /mnt/bundle-addons/connector 
+    && git clone --depth=1 -b 12.0 https://github.com/OCA/connector.git /mnt/bundle-addons/connector \
+    && git clone --depth=1 -b 12.0 https://github.com/OCA/purchase-workflow.git /mnt/bundle-addons/purchase-workflow \
+    && git clone --depth=1 -b 12.0 https://github.com/OCA/contract.git /mnt/bundle-addons/contract
+
+    
     
 
 COPY extra-requirements.txt /mnt/utils/extra-requirements.txt

@@ -14,6 +14,8 @@ addons_path:
     - /mnt/bundle-addons/partner-contact
     - /mnt/bundle-addons/queue 
     - /mnt/bundle-addons/connector 
+    - /mnt/bundle-addons/purchase-workflow 
+    - /mnt/bundle-addons/contract
     
 admin_passwd: admin
 server_wide_modules: queue_job,web
