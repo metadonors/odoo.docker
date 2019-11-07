@@ -3,7 +3,6 @@
 addons_path:
     - /mnt/bundle-addons/account-invoicing
     - /mnt/bundle-addons/connector 
-    #- /mnt/bundle-addons/dev-addons
     - /mnt/bundle-addons/hr
     - /mnt/bundle-addons/muk_base
     - /mnt/bundle-addons/muk_web

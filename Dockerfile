@@ -16,8 +16,8 @@ RUN apt-get update \
         openssh-client \
         pkg-config \
     && apt-get -y -t testing install python3 python3-dev python3-pip \
-    && mkdir -p /mnt/utils /mnt/community-addons /mnt/dev-addons /mnt/bundle-addons \
-    && chown -R odoo:odoo /mnt/utils /mnt/community-addons /mnt/dev-addons /mnt/bundle-addons
+    && mkdir -p /mnt/utils /mnt/bundle-addons \
+    && chown -R odoo:odoo /mnt/utils /mnt/bundle-addons
 
 
 COPY ./odoo/extra-requirements.txt /mnt/utils/extra-requirements.txt
