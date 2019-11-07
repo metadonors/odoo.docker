@@ -4,7 +4,7 @@ volumes:
     pgdata_odoo_12:
 services:
   odoo:
-    image: metadonors/odoo:workshop
+    image: metadonors/odoo:12.0
     #build: odoo
     ports:
       - 80:80
@@ -14,7 +14,7 @@ services:
       - "postgres:postgres"
     environment:
       - ODOO_DB_HOST=postgres
-      - ODOO_DB_NAME=demo
+      - ODOO_DB_NAME=odoo12
       - ODOO_DB_USER=odoo
       - ODOO_DB_PASSWORD=odoo
       - ODOO_WORKERS=4
@@ -23,7 +23,7 @@ services:
     volumes:
       - "data_odoo_12:/var/lib/odoo/"
       # mount volumes for dev needs
-      - "./addons:/mnt/dev-addons"
+      #- "./addons:/mnt/dev-addons"
     # launch container in odoo dev mode
     command: run 
   postgres:

@@ -9,5 +9,5 @@ fi
 
 echo "Building $TAG"
 
-docker build -t metadonors/odoo:$TAG odoo/
+docker build --no-cache -t metadonors/odoo:$TAG .
 docker push metadonors/odoo:$TAG 

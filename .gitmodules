@@ -1,0 +1,52 @@
+[submodule "addons/web"]
+	path = addons/web
+	url = https://github.com/OCA/web.git
+	branch = 12.0
+[submodule "addons/website"]
+	path = addons/website
+	url = https://github.com/OCA/website.git
+	branch = 12.0
+[submodule "addons/project"]
+	path = addons/project
+	url = https://github.com/OCA/project.git
+	branch = 12.0
+[submodule "addons/hr"]
+	path = addons/hr
+	url = https://github.com/OCA/hr.git
+	branch = 12.0
+[submodule "addons/muk_base"]
+	path = addons/muk_base
+	url = https://github.com/muk-it/muk_base.git
+	branch = 12.0
+[submodule "addons/muk_web"]
+	path = addons/muk_web
+	url = https://github.com/muk-it/muk_web.git
+	branch = 12.0
+[submodule "addons/server-ux"]
+	path = addons/server-ux
+	url = https://github.com/OCA/server-ux.git
+	branch = 12.0
+[submodule "addons/server-tools"]
+	path = addons/server-tools
+	url = https://github.com/OCA/server-tools.git
+	branch = 12.0
+[submodule "addons/account-invoicing"]
+	path = addons/account-invoicing
+	url = https://github.com/OCA/account-invoicing.git
+	branch = 12.0
+[submodule "addons/queue"]
+	path = addons/queue
+	url = https://github.com/OCA/queue.git
+	branch = 12.0
+[submodule "addons/rest-framework"]
+	path = addons/rest-framework
+	url = https://github.com/OCA/rest-framework.git
+	branch = 12.0
+[submodule "addons/connector"]
+	path = addons/connector
+	url = https://github.com/OCA/connector.git
+	branch = 12.0
+[submodule "addons/purchase-workflow"]
+	path = addons/purchase-workflow
+	url = https://github.com/OCA/purchase-workflow.git
+	branch = 12.0

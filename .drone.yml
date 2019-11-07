@@ -1,0 +1,71 @@
+kind: pipeline
+name: production
+steps:
+ - name: submodules
+    image: alpine/git
+    commands:
+      - git submodule update --recursive --remote
+      
+  - name: docker  
+    image: plugins/docker
+    settings:
+      repo: metadonors/odoo
+      tags: 
+        - 12.0
+      username:
+        from_secret: docker_login
+      password:
+        from_secret: docker_password
+  
+  - name: slack
+    image: plugins/slack
+    settings:
+      username: Marvin il DevOps
+      icon_url: https://cdn4.iconfinder.com/data/icons/free-large-android-icons/512/Paranoid_android_with_shadow.png
+      webhook: 
+        from_secret: slack_hook
+      channel: dev_metaface
+      template: Creata immagine Odoo 12.0 
+      
+trigger:
+  branch:
+    - master
+  event:
+    - push
+
+---
+kind: secret
+name: docker_login
+get:
+    path: ci/docker
+    name: username
+  
+---
+kind: secret
+name: docker_password
+get:
+    path: ci/docker
+    name: password
+  
+  
+---
+kind: secret
+name: rancher_access_key
+get:
+    path: ci/rancher
+    name: access_key
+  
+---
+kind: secret
+name: rancher_secret_key
+get:
+    path: ci/rancher
+    name: secret_key
+
+  
+---
+kind: secret
+name: slack_hook
+get:
+    path: ci/slack  
+    name: webhook_metaface

@@ -1,21 +1,21 @@
 ---
 
 addons_path:
-    - /mnt/dev-addons
-    - /mnt/extra-addons
-    - /mnt/community-addons
-    - /mnt/bundle-addons/web
-    - /mnt/bundle-addons/website
-    - /mnt/bundle-addons/server-ux
+    - /mnt/bundle-addons/account-invoicing
+    - /mnt/bundle-addons/connector 
+    #- /mnt/bundle-addons/dev-addons
+    - /mnt/bundle-addons/hr
     - /mnt/bundle-addons/muk_base
     - /mnt/bundle-addons/muk_web
+    - /mnt/bundle-addons/partner-contact
+    - /mnt/bundle-addons/project
+    - /mnt/bundle-addons/purchase-workflow 
+    - /mnt/bundle-addons/queue 
     - /mnt/bundle-addons/rest-framework
     - /mnt/bundle-addons/server-tools
-    - /mnt/bundle-addons/partner-contact
-    - /mnt/bundle-addons/queue 
-    - /mnt/bundle-addons/connector 
-    - /mnt/bundle-addons/purchase-workflow 
-    - /mnt/bundle-addons/contract
+    - /mnt/bundle-addons/server-ux
+    - /mnt/bundle-addons/web
+    - /mnt/bundle-addons/website
     
 admin_passwd: admin
 server_wide_modules: queue_job,web
