@@ -5,6 +5,7 @@ addons_path:
     - /mnt/bundle-addons/connector 
     - /mnt/bundle-addons/hr
     - /mnt/bundle-addons/muk_base
+    - /mnt/bundle-addons/muk_misc
     - /mnt/bundle-addons/muk_web
     - /mnt/bundle-addons/l10n-italy
     - /mnt/bundle-addons/partner-contact
