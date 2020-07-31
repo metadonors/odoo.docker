@@ -2,7 +2,7 @@ FROM odoo:12.0
 
 USER root
 
-RUN echo "deb http://ftp.de.debian.org/debian testing main" >> /etc/apt/sources.list
+#RUN echo "deb http://ftp.de.debian.org/debian testing main" >> /etc/apt/sources.list
 #RUN echo 'APT::Default-Release "stable";' | tee -a /etc/apt/apt.conf.d/00local
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -15,7 +15,7 @@ RUN apt-get update \
         sudo \
         openssh-client \
         pkg-config \
-    && apt-get -y -t testing install python3 python3-dev python3-pip \
+    && apt-get -y install python3 python3-dev python3-pip \
     && mkdir -p /mnt/utils /mnt/bundle-addons \
     && chown -R odoo:odoo /mnt/utils /mnt/bundle-addons
 
