@@ -6,25 +6,25 @@ args=("$@")
 
 case $1 in
     ipython)
-        exec sudo -E -u odoo ipython
+        exec sudo -E -u /wait-for-it.sh postgres:5432 -- odoo ipython
         ;;
     shell)
-        exec sudo -E -u odoo odoo shell ${args[@]:1}
+        exec sudo -E -u /wait-for-it.sh postgres:5432 -- odoo odoo shell ${args[@]:1}
         ;;
     upgrade)
-        exec sudo -E -u odoo odoo -c /etc/odoo/odoo.conf -u ${args[@]:1} --stop-after-init
+        exec sudo -E -u odoo /wait-for-it.sh postgres:5432 -- odoo -c /etc/odoo/odoo.conf -u ${args[@]:1} --stop-after-init
         ;;
     test)
-        exec sudo -E -u odoo odoo -c /etc/odoo/odoo.conf --workers 0 --test-enable --stop-after-init -i ${args[@]:1}
+        exec sudo -E -u odoo /wait-for-it.sh postgres:5432 -- odoo -c /etc/odoo/odoo.conf --workers 0 --log-level=test --test-enable --stop-after-init -u ${args[@]:1}
         ;;
     test_all)
-        exec sudo -E -u odoo odoo -c /etc/odoo/odoo.conf --workers 0 --test-enable --stop-after-init
+        exec sudo -E -u odoo /wait-for-it.sh postgres:5432 -- odoo -c /etc/odoo/odoo.conf --workers 0 --test-enable --stop-after-init
         ;;
     run)
         echo "Starting nginx..."
         nginx -c /etc/nginx/nginx.conf &    
         echo "Starting Odoo..."
-        sudo -E -u odoo odoo -c /etc/odoo/odoo.conf ${args[@]:1}
+        sudo -E -u odoo /wait-for-it.sh postgres:5432 -- odoo -c /etc/odoo/odoo.conf ${args[@]:1}
         ;;
     *)
         exec "$@"

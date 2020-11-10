@@ -57,3 +57,6 @@ xmlrpc_interface = {{ env['ODOO_XMLRPC_INTERFACE'] or cfg['xmlrpc_interface'] | 
 xmlrpc_port = {{ env['ODOO_XMLRPC_PORT'] or cfg['xmlrpc_port'] | default('8069', true) }}
 import_export_log_path = {{ env['ODOO_IMPORT_EXPORT_LOG_PATH'] or cfg['import_export_log_path'] | default('/var/lib/odoo/var/log', true) }}
 importer_log_path = {{ env['ODOO_IMPORTER_LOG_PATH'] or cfg['importer_log_path'] | default('/var/lib/odoo/var/log', true) }}
+
+[base_rest]
+dev_mode = {{ env['ODOO_REST_DEV_MODE'] or cfg['rest_dev_mode'] | default('True', true) }}
