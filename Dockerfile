@@ -24,6 +24,7 @@ COPY ./odoo/extra-requirements.txt /mnt/utils/extra-requirements.txt
 COPY ./odoo/scripts /mnt/utils/scripts
 COPY ./odoo/conf /mnt/utils/scripts/conf
 COPY ./odoo/entrypoint.sh /entrypoint.sh
+COPY ./odoo/wait-for-it.sh /wait-for-it.sh
 
 COPY ./odoo/conf/web/nginx.conf /etc/nginx/nginx.conf
 COPY ./odoo/conf/web/odoo.conf /etc/nginx/conf.d/default.conf
