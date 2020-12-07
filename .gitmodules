@@ -62,3 +62,55 @@
 	path = addons/muk_misc
 	url = https://github.com/muk-it/muk_misc.git
 	branch = 12.0
+[submodule "addons/account-financial-tools"]
+	path = addons/account-financial-tools
+	url = https://github.com/OCA/account-financial-tools
+	branch = 12.0
+[submodule "addons/account-financial-reporting"]
+	path = addons/account-financial-reporting
+	url = https://github.com/OCA/account-financial-reporting
+	branch = 12.0
+[submodule "addons/mis-builder"]
+	path = addons/mis-builder
+	url = https://github.com/OCA/mis-builder
+	branch = 12.0
+[submodule "addons/reporting-engine"]
+	path = addons/reporting-engine
+	url = https://github.com/OCA/reporting-engine
+	branch = 12.0
+[submodule "addons/stock-logistics-workflow"]
+	path = addons/stock-logistics-workflow
+	url = https://github.com/OCA/stock-logistics-workflow
+	branch = 12.0
+[submodule "addons/product-attribute"]
+	path = addons/product-attribute
+	url = https://github.com/OCA/product-attribute
+	branch = 12.0
+[submodule "addons/intrastat-extrastat"]
+	path = addons/intrastat-extrastat
+	url = https://github.com/OCA/intrastat-extrastat
+	branch = 12.0
+[submodule "addons/server-env"]
+	path = addons/server-env
+	url = https://github.com/OCA/server-env
+	branch = 12.0
+[submodule "addons/account-payment"]
+	path = addons/account-payment
+	url = https://github.com/OCA/account-payment
+	branch = 12.0
+[submodule "addons/account-analytic"]
+	path = addons/account-analytic
+	url = https://github.com/OCA/account-analytic
+	branch = 12.0
+[submodule "addons/stock-logistics-warehouse"]
+	path = addons/stock-logistics-warehouse
+	url = https://github.com/OCA/stock-logistics-warehouse
+	branch = 12.0
+[submodule "addons/stock-logistics-barcode"]
+	path = addons/stock-logistics-barcode
+	url = https://github.com/OCA/stock-logistics-barcode
+	branch = 12.0
+[submodule "addons/pos"]
+	path = addons/pos
+	url = https://github.com/OCA/pos
+	branch = 12.0
