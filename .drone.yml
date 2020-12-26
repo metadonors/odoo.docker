@@ -18,15 +18,6 @@ steps:
       password:
         from_secret: docker_password
   
-  - name: slack
-    image: plugins/slack
-    settings:
-      username: Marvin il DevOps
-      icon_url: https://cdn4.iconfinder.com/data/icons/free-large-android-icons/512/Paranoid_android_with_shadow.png
-      webhook: 
-        from_secret: slack_hook
-      channel: dev_metaface
-      template: Creata immagine Odoo 12.0 
       
 trigger:
   branch:
