@@ -1,7 +1,7 @@
 kind: pipeline
 name: production
 steps:
- - name: submodules
+  - name: submodules
     image: alpine/git
     commands:
       - git submodule update --recursive --remote
@@ -10,6 +10,7 @@ steps:
     image: plugins/docker
     settings:
       repo: metadonors/odoo
+      mirror: http://registry:5000
       tags: 
         - 12.0
       username:
