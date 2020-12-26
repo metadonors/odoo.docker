@@ -29,43 +29,7 @@ steps:
       
 trigger:
   branch:
-    - master
+    - 12.0
   event:
     - push
 
----
-kind: secret
-name: docker_login
-get:
-    path: ci/docker
-    name: username
-  
----
-kind: secret
-name: docker_password
-get:
-    path: ci/docker
-    name: password
-  
-  
----
-kind: secret
-name: rancher_access_key
-get:
-    path: ci/rancher
-    name: access_key
-  
----
-kind: secret
-name: rancher_secret_key
-get:
-    path: ci/rancher
-    name: secret_key
-
-  
----
-kind: secret
-name: slack_hook
-get:
-    path: ci/slack  
-    name: webhook_metaface

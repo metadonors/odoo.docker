@@ -1,21 +1,34 @@
 ---
 
 addons_path:
+    - /mnt/bundle-addons/account-analytic
+    - /mnt/bundle-addons/account-financial-reporting
+    - /mnt/bundle-addons/account-financial-tools
     - /mnt/bundle-addons/account-invoicing
+    - /mnt/bundle-addons/account-payment
+    - /mnt/bundle-addons/bank-payment
     - /mnt/bundle-addons/connector 
     - /mnt/bundle-addons/hr
+    - /mnt/bundle-addons/intrastat-extrastat
+    - /mnt/bundle-addons/l10n-italy
+    - /mnt/bundle-addons/mis-builder
     - /mnt/bundle-addons/muk_base
     - /mnt/bundle-addons/muk_misc
     - /mnt/bundle-addons/muk_web
-    - /mnt/bundle-addons/l10n-italy
     - /mnt/bundle-addons/partner-contact
+    - /mnt/bundle-addons/pos
+    - /mnt/bundle-addons/product-attribute
     - /mnt/bundle-addons/project
     - /mnt/bundle-addons/purchase-workflow 
     - /mnt/bundle-addons/queue 
+    - /mnt/bundle-addons/reporting-engine 
     - /mnt/bundle-addons/rest-framework
+    - /mnt/bundle-addons/server-env
     - /mnt/bundle-addons/server-tools
     - /mnt/bundle-addons/server-ux
+    - /mnt/bundle-addons/social
     - /mnt/bundle-addons/web
+    - /mnt/bundle-addons/database
     - /mnt/bundle-addons/website
     
 admin_passwd: admin

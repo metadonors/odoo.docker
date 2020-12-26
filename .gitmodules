@@ -114,3 +114,11 @@
 	path = addons/pos
 	url = https://github.com/OCA/pos
 	branch = 12.0
+[submodule "addons/bank-payment"]
+	path = addons/bank-payment
+	url = https://github.com/OCA/bank-payment.git
+	branch = 12.0
+[submodule "addons/social"]
+	path = addons/social
+	url = https://github.com/OCA/social.git
+	branch = 12.0

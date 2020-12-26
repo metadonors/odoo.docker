@@ -31,10 +31,12 @@ captain-pycard
 schwifty
 python-mobyt
 mandrill
-tablib==2.0.0
+tablib[all]==2.0.0
 paramiko
 python-redmine
 cubiscan
 mock
 python-barcode
-
+python-axepta==0.3.0
+pyxb
+asn1crypto

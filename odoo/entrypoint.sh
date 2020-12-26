@@ -26,6 +26,13 @@ case $1 in
         echo "Starting Odoo..."
         sudo -E -u odoo /wait-for-it.sh postgres:5432 -- odoo -c /etc/odoo/odoo.conf ${args[@]:1}
         ;;
+    prod)
+        echo "Starting nginx..."
+        exec nginx -c /etc/nginx/nginx.conf &    
+
+        echo "Starting Odoo with migrations..."
+        exec sudo -E -u odoo odoo -c /etc/odoo/odoo.conf ${args[@]:1} -u project_migrations
+        ;;
     *)
         exec "$@"
         ;;
