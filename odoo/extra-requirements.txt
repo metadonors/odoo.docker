@@ -40,3 +40,4 @@ python-barcode
 python-axepta==0.3.0
 pyxb
 asn1crypto
+requests-futures

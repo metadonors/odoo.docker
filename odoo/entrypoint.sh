@@ -6,10 +6,10 @@ args=("$@")
 
 case $1 in
     ipython)
-        exec sudo -E -u /wait-for-it.sh postgres:5432 -- odoo ipython
+        exec sudo -E -u odoo /wait-for-it.sh postgres:5432 -- odoo ipython
         ;;
     shell)
-        exec sudo -E -u /wait-for-it.sh postgres:5432 -- odoo odoo shell ${args[@]:1}
+        exec sudo -E -u odoo /wait-for-it.sh postgres:5432 -- odoo shell ${args[@]:1}
         ;;
     upgrade)
         exec sudo -E -u odoo /wait-for-it.sh postgres:5432 -- odoo -c /etc/odoo/odoo.conf -u ${args[@]:1} --stop-after-init
