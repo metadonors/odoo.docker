@@ -58,5 +58,15 @@ xmlrpc_port = {{ env['ODOO_XMLRPC_PORT'] or cfg['xmlrpc_port'] | default('8069',
 import_export_log_path = {{ env['ODOO_IMPORT_EXPORT_LOG_PATH'] or cfg['import_export_log_path'] | default('/var/lib/odoo/var/log', true) }}
 importer_log_path = {{ env['ODOO_IMPORTER_LOG_PATH'] or cfg['importer_log_path'] | default('/var/lib/odoo/var/log', true) }}
 
+# Session store
+session_store_database = {{ env['ODOO_SESSION_STORE_DATABASE'] or cfg['session_store_database'] | default('', true) }}
+session_store_redis = {{ env['ODOO_SESSION_STORE_REDIS'] or cfg['session_store_redis'] | default('', true) }}
+session_store_dbname = {{ env['ODOO_SESSION_STORE_DBNAME'] or cfg['session_store_dbname'] | default('', true) }}
+session_store_prefix = {{ env['ODOO_SESSION_STORE_PREFIX'] or cfg['session_store_prefix'] | default('', true) }}
+session_store_host = {{ env['ODOO_SESSION_STORE_HOST'] or cfg['session_store_host'] | default('', true) }}
+session_store_port = {{ env['ODOO_SESSION_STORE_PORT'] or cfg['session_store_port'] | default('', true) }}
+session_store_dbindex = {{ env['ODOO_SESSION_STORE_DBINDEX'] or cfg['session_store_dbindex'] | default('', true) }}
+session_store_pass = {{ env['ODOO_SESSION_STORE_PASS'] or cfg['session_store_pass'] | default('', true) }}
+
 [base_rest]
 dev_mode = {{ env['ODOO_REST_DEV_MODE'] or cfg['rest_dev_mode'] | default('True', true) }}
