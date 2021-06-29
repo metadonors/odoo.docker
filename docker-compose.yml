@@ -21,7 +21,7 @@ services:
       - ODOO_LIMIT_MEMORY_SOFT=5704253440
     volumes:
       - "data_odoo_12:/var/lib/odoo/"
-    command: run 
+    command: run --dev=all
   postgres:
     image: postgres:10.0
     ports:
