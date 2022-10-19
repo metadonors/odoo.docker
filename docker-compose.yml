@@ -1,7 +1,7 @@
 version: '3'
 volumes:
-    data_odoo_12:
-    pgdata_odoo_12:
+    data_odoo_15:
+    pgdata_odoo_15:
 services:
   odoo:
     build: .
@@ -20,10 +20,10 @@ services:
       - ODOO_LIMIT_MEMORY_HARD=6845104128
       - ODOO_LIMIT_MEMORY_SOFT=5704253440
     volumes:
-      - "data_odoo_12:/var/lib/odoo/"
+      - "data_odoo_15:/var/lib/odoo/"
     command: run --dev=all
   postgres:
-    image: postgres:10.0
+    image: postgres:15.0-alpine
     ports:
        - 5432:5432
     environment:
@@ -31,6 +31,6 @@ services:
       - POSTGRES_DB=odoo
       - POSTGRES_PASSWORD=odoo
     volumes:
-      - "pgdata_odoo_12:/var/lib/postgresql/data"
+      - "pgdata_odoo_15:/var/lib/postgresql/data"
 
   
