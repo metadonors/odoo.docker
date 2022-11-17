@@ -20,6 +20,7 @@ services:
       - ODOO_LIMIT_MEMORY_HARD=6845104128
       - ODOO_LIMIT_MEMORY_SOFT=5704253440
     volumes:
+      - "./addons/todo:/mnt/bundle-addons/"
       - "data_odoo_15:/var/lib/odoo/"
     command: run --dev=all
   postgres:
