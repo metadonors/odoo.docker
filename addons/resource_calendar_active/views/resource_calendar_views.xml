@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="resource_calendar_form_active" model="ir.ui.view">
+        <field name="name">resource.calendar.form.active</field>
+        <field name="model">resource.calendar</field>
+        <field name="inherit_id" ref="resource.resource_calendar_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='hours_per_day']" position="after">
+                <field name="active"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Il campo active nell'arch della lista e' quello che accende
+         Archivia/Ripristina nel menu Azione (web: archiveEnabled). -->
+    <record id="resource_calendar_tree_active" model="ir.ui.view">
+        <field name="name">resource.calendar.tree.active</field>
+        <field name="model">resource.calendar</field>
+        <field name="inherit_id" ref="resource.view_resource_calendar_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="attributes">
+                <attribute name="decoration-muted">not active</attribute>
+            </xpath>
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="active" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="resource_calendar_search_active" model="ir.ui.view">
+        <field name="name">resource.calendar.search.active</field>
+        <field name="model">resource.calendar</field>
+        <field name="inherit_id" ref="resource.view_resource_calendar_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <separator/>
+                <filter string="Archiviati" name="inactive" domain="[('active','=',False)]"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
